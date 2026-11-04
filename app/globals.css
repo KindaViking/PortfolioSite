@@ -153,43 +153,7 @@ a.panel:focus-visible {
   animation: ember-rise linear infinite;
 }
 
-/* The colossus breathes: a slow rise and fall */
-.colossus {
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-  animation: breathe 7s ease-in-out infinite;
-}
-
-@keyframes breathe {
-  0%,
-  100% {
-    transform: translateY(6px) scale(1);
-  }
-  50% {
-    transform: translateY(-4px) scale(1.012);
-  }
-}
-
-/* Its eyes blink now and then */
-.colossus .eyes {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: blink 6s infinite;
-}
-
-@keyframes blink {
-  0%,
-  92%,
-  100% {
-    transform: scaleY(1);
-  }
-  95% {
-    transform: scaleY(0.1);
-  }
-}
-
-/* Molten veins and the lava rift pulse with heat */
-.colossus .veins,
+/* The lava rift pulses with heat */
 .lava {
   animation: smoulder 3.2s ease-in-out infinite alternate;
 }
@@ -300,9 +264,6 @@ a.panel:focus-visible {
     display: none;
   }
 
-  .colossus,
-  .colossus .eyes,
-  .colossus .veins,
   .lava,
   .flier-bob,
   .flier-wings {

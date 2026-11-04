@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FigureStage from "@/components/FigureStage";
 import Hellscape from "@/components/Hellscape";
 import ProjectCard from "@/components/ProjectCard";
 import SpikeEdge from "@/components/SpikeEdge";
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <section className="relative flex min-h-[92svh] items-end">
         <Hellscape />
+        <FigureStage />
         <div className="relative z-10 mx-auto w-full max-w-5xl px-6 pt-32 pb-20">
           <h1>
             <span className="sr-only">Hi, I&apos;m </span>

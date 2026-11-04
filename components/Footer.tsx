@@ -1,4 +1,5 @@
 import Year from "@/components/Year";
+import { figureCredit } from "@/lib/credits";
 import { projects } from "@/lib/projects";
 import { site } from "@/lib/site";
 import { tools } from "@/lib/tools";
@@ -48,6 +49,20 @@ export default function Footer() {
             </ul>
             <span className="text-xs text-ash">
               © <Year /> {site.fullName}
+            </span>
+            <span className="text-center text-[0.7rem] text-ash/80">
+              3D figure:{" "}
+              <a href={figureCredit.source} className="underline hover:text-ember">
+                {figureCredit.title}
+              </a>{" "}
+              by{" "}
+              <a href={figureCredit.authorUrl} className="underline hover:text-ember">
+                {figureCredit.author}
+              </a>
+              ,{" "}
+              <a href={figureCredit.licenseUrl} className="underline hover:text-ember">
+                {figureCredit.license}
+              </a>
             </span>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import Flier from "@/components/Flier";
 
-// Original hero backdrop: a burning sky, a horned colossus rising behind the ridge,
-// a flock of winged demons, a glowing lava rift and the odd lightning strike, all drawn in SVG.
+// Original hero backdrop: a burning sky, a flock of winged demons, a glowing lava rift
+// and the odd lightning strike, all drawn in SVG. The 3D figure sits on top (see FigureStage).
 // Everything uses fixed values (not random) so the server and browser render the same thing.
 const embers = [
   { left: "6%", size: 3, duration: 9, delay: 0, drift: "30px" },
@@ -62,10 +62,6 @@ export default function Hellscape() {
             <stop offset="45%" stopColor="#f08a2a" />
             <stop offset="100%" stopColor="#8a1a0c" />
           </linearGradient>
-          <linearGradient id="colossus-rim" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#3a0807" />
-            <stop offset="100%" stopColor="#120202" />
-          </linearGradient>
           <filter id="hot" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="3" result="blur" />
             <feMerge>
@@ -95,45 +91,6 @@ export default function Hellscape() {
           fill="#4a0d08"
           d="M0 560 L80 500 L130 530 L210 440 L260 490 L340 410 L400 470 L470 380 L530 450 L610 400 L680 460 L760 360 L820 430 L900 390 L980 450 L1060 370 L1130 440 L1210 400 L1290 460 L1360 420 L1440 470 L1440 800 L0 800 Z"
         />
-
-        {/* the colossus: an original horned titan, breathing slowly behind the mountains */}
-        <g className="colossus">
-          <g fill="url(#colossus-rim)">
-            {/* horns */}
-            <path d="M1118 296 C1086 274 1054 228 1066 160 C1078 210 1100 248 1134 276 Z" />
-            <path d="M1182 296 C1214 274 1246 228 1234 160 C1222 210 1200 248 1166 276 Z" />
-            {/* head */}
-            <path d="M1112 378 L1104 322 C1104 290 1124 266 1150 266 C1176 266 1196 290 1196 322 L1188 378 Z" />
-            {/* shoulders, torso and spikes */}
-            <path d="M985 660 L1006 452 C1018 402 1068 382 1110 374 L1190 374 C1232 382 1282 402 1294 452 L1315 660 Z" />
-            <path d="M1040 398 L1026 344 L1064 388 Z M1260 398 L1274 344 L1236 388 Z" />
-            {/* arms */}
-            <path d="M1006 452 C980 504 964 566 970 660 L1004 660 C1004 574 1014 522 1032 482 Z" />
-            <path d="M1294 452 C1320 504 1336 566 1330 660 L1296 660 C1296 574 1286 522 1268 482 Z" />
-          </g>
-          {/* molten veins */}
-          <g
-            className="veins"
-            fill="none"
-            stroke="#f08a2a"
-            strokeWidth="2"
-            strokeLinecap="round"
-            filter="url(#hot)"
-          >
-            <path d="M1150 392 L1144 430 L1156 462 L1146 500 L1152 540" />
-            <path d="M1144 430 L1110 452 L1092 490" />
-            <path d="M1156 462 L1194 480 L1210 520" />
-            <path d="M1060 420 L1080 450 L1072 486" />
-            <path d="M1240 420 L1222 448 L1230 482" />
-          </g>
-          {/* four eyes */}
-          <g className="eyes" fill="#ffd27a" filter="url(#hot)">
-            <ellipse cx="1132" cy="314" rx="6" ry="3.2" />
-            <ellipse cx="1168" cy="314" rx="6" ry="3.2" />
-            <ellipse cx="1139" cy="330" rx="3.4" ry="2" />
-            <ellipse cx="1161" cy="330" rx="3.4" ry="2" />
-          </g>
-        </g>
 
         {/* spires */}
         <path
