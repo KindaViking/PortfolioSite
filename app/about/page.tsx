@@ -27,20 +27,6 @@ export default function AboutPage() {
           {/* TODO: add a few sentences in your own words: what you're into, what you want to work on next */}
         </div>
 
-        <h2 className="headline mt-16 text-4xl text-bone">Experience</h2>
-        <div className="panel mt-6 max-w-3xl p-6 pt-7">
-          <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <h3 className="headline text-2xl text-bone">
-              Senior Staff Team Member, Krem Gelateria
-            </h3>
-            <p className="font-semibold text-ember">Aug 2025 to Aug 2026</p>
-          </div>
-          <p className="mt-3 text-ash">
-            Senior member of the team, specialising in barista work.
-            {/* TODO: add a line on responsibilities, e.g. training staff or running shifts */}
-          </p>
-        </div>
-
         <h2 className="headline mt-16 text-4xl text-bone">Tools I use</h2>
         <ul className="mt-6 flex max-w-3xl flex-wrap gap-2">
           {tools.map((t) => (

@@ -40,19 +40,6 @@ export const projects: Project[] = [
     repo: "https://github.com/KindaViking/cs4421-astro-blog",
   },
   {
-    slug: "robocode-bot",
-    title: "Robocode Bot",
-    tagline: "A Java battle robot that reads its opponents' energy to dodge shots.",
-    summary:
-      "A Robocode robot written in Java for a league that only allows the basic Robot class, so every movement and targeting trick has to work without AdvancedRobot's non-blocking calls.",
-    details: [
-      "Tracks enemy energy levels to detect when an opponent has fired.",
-      "Dodges by moving perpendicular to the incoming shot.",
-      "Continually tuned for movement, targeting and energy use.",
-    ],
-    tech: ["Java", "Robocode"],
-  },
-  {
     slug: "hashedblock",
     title: "HashedBlock",
     tagline: "A crypto education platform, built for the Whop hackathon.",

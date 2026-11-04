@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FigureStage from "@/components/FigureStage";
 import Hellscape from "@/components/Hellscape";
+import ProfileLinks from "@/components/ProfileLinks";
 import ProjectCard from "@/components/ProjectCard";
 import SpikeEdge from "@/components/SpikeEdge";
 import { projects } from "@/lib/projects";
@@ -15,24 +16,24 @@ export default function Home() {
         <div className="relative z-10 mx-auto w-full max-w-5xl px-6 pt-32 pb-20">
           <h1>
             <span className="sr-only">Hi, I&apos;m </span>
-            <span className="wordmark block text-[clamp(5rem,18vw,13rem)] leading-[0.85]">
-              {site.name}
+            {/* each word on its own line so the name stays clear of the 3D figure */}
+            <span className="wordmark block text-[clamp(4rem,12vw,9rem)] leading-[0.85]">
+              {site.name.split(" ").map((word) => (
+                <span key={word} className="block">
+                  {word}
+                </span>
+              ))}
             </span>
           </h1>
           <p className="headline mt-4 text-2xl text-bone sm:text-4xl">{site.role}</p>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-bone/90">{site.intro}</p>
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-8">
+            <ProfileLinks />
+          </div>
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-bone/90">{site.intro}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/projects" className="btn btn-blood">
               See my projects
             </Link>
-            <a href={site.github} className="btn btn-steel">
-              GitHub
-            </a>
-            {site.cv && (
-              <a href={site.cv} className="btn btn-steel">
-                CV
-              </a>
-            )}
           </div>
         </div>
         <SpikeEdge className="absolute bottom-0 translate-y-px" />
